@@ -7,4 +7,4 @@ st.title("numero cuatro")
 st.text("numero cinco")
 
 sidebar = st.sidebar
-sidebar.title("this app is bette r than any other ")
+sidebar.title("this app is better than any other")
