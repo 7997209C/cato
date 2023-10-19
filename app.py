@@ -18,7 +18,7 @@ def set_png_as_page_bg(png_file):
         background-size: cover;
         background-position: top left;
         background-repeat: no-repeat;
-        background-attachment: local;
+        background-attachment: fixed;
         }}
     </style>
     '''
