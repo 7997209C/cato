@@ -31,8 +31,8 @@ set_png_as_page_bg("cato1234.jpeg")
 colmn1 , colmn2 , colmn3 = st.columns(3)
 
 
-username = colmn1.text_input("username")
+username = colmn1.text_input("username",label_visibility="hidden",placeholder="Username")
 # st.write(username)
-password = colmn2.text_input ("password")
+password = colmn2.text_input ("password",label_visibility="hidden",placeholder="Password")
 sidebar = st.sidebar
 button = colmn1.button ("login")
