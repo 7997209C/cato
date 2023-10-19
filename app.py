@@ -9,7 +9,6 @@ def get_img_as_base64(file):
     return base64.b64encode(data).decode()
 
 def set_png_as_page_bg(png_file):
-    print("hello")
     img = get_img_as_base64(png_file)
     page_bg_img = f'''
     <style>
