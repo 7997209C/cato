@@ -30,7 +30,7 @@ def save_chat_message(filename, message_data):
         json.dump(messages, file)
 
 def main():
-    st.title("Streamlit Chat Forum")
+    st.title("Chat")
 
     # Input for username
     username = st.text_input("Enter your username", "")
