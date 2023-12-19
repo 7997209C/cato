@@ -24,14 +24,15 @@ def set_png_as_page_bg(png_file):
     
     st.markdown(page_bg_img,unsafe_allow_html=True)
 
-set_png_as_page_bg("cato1234.jpeg")
+set_png_as_page_bg("img/christmas_background.jpg")
 #********************************************************************
 #login form
 colmn1 , colmn2 , colmn3 = st.columns(3)
 username = colmn1.text_input("username",label_visibility="hidden",placeholder="Username")
 # st.write(username)
 password = colmn2.text_input ("password",label_visibility="hidden",placeholder="Password")
-button_loging = colmn1.button ("login")
+# st.write(password)
+button_loging = st.button ("login")
 
 #sidebar app
 with st.sidebar:
