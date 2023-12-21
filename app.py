@@ -37,3 +37,14 @@ button_loging = st.button ("login")
 #sidebar app
 with st.sidebar:
     button(username='catocarling',floating=False)
+
+helo = st.text_input ("enter an number") 
+mom = st.text_input ("enter a second number")
+
+st.title(helo)
+st.title(mom)
+
+def hi (n,m):
+    st.title(n+m)
+    
+hi (helo,mom)
