@@ -30,12 +30,10 @@ set_png_as_page_bg("img/christmas_background.jpg")
 
 username = st.text_input("username",label_visibility="hidden",placeholder="Username")
 # st.write(username)
-password = colmn2.text_input ("password",label_visibility="hidden",placeholder="Password")
+password = st.text_input ("password",label_visibility="hidden",placeholder="Password")
 # st.write(password)
 button_loging = st.button ("login")
 
 #sidebar app
 with st.sidebar:
     button(username='catocarling',floating=False)
-
-
