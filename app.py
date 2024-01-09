@@ -1,7 +1,7 @@
 import streamlit as st
 import base64
 from streamlit_extras.buy_me_a_coffee import button
-#****************************background image##################
+#****************************background image###################
 @st.cache_data
 def get_img_as_base64(file):
     with open(file, "rb") as f:
