@@ -24,7 +24,7 @@ def set_png_as_page_bg(png_file):
     
     st.markdown(page_bg_img,unsafe_allow_html=True)
 
-set_png_as_page_bg("img/christmas_background.jpg")
+set_png_as_page_bg("img/latestbg.jpeg")
 #********************************************************************
 #login form
 
