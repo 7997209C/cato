@@ -1,39 +1,40 @@
 import streamlit as st
-import base64
 from streamlit_extras.buy_me_a_coffee import button
+from auth import auth_data
+from helpers.utils import set_png_as_page_bg , hide_sidebar,show_sidebar
+st.set_page_config(initial_sidebar_state="collapsed")
 #****************************background image###################
-@st.cache_data
-def get_img_as_base64(file):
-    with open(file, "rb") as f:
-        data = f.read()
-    return base64.b64encode(data).decode()
-
-def set_png_as_page_bg(png_file):
-    img = get_img_as_base64(png_file)
-    page_bg_img = f'''
-    <style>
-        [data-testid="stAppViewContainer"] > .main {{
-        background-image: url("data:image/png;base64,{img}");
-        background-size: cover;
-        background-position: top center;
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        }}
-    </style>
-    '''
-    
-    st.markdown(page_bg_img,unsafe_allow_html=True)
-
 set_png_as_page_bg("img/latestbg.jpeg")
 #********************************************************************
 #login form
 
-username = st.text_input("username",label_visibility="hidden",placeholder="Username")
-# st.write(username)
-password = st.text_input ("password",label_visibility="hidden",placeholder="Password")
-# st.write(password)
-button_loging = st.button ("login")
-
 #sidebar app
-with st.sidebar:
-    button(username='catocarling',floating=False)
+# with st.sidebar:
+#     button(username='catocarling',floating=False)
+
+
+def main():
+
+    authenticator = auth_data()
+
+    # login button
+    name, authentication_status, username = authenticator.login('Login', 'main')
+
+    if authentication_status:
+        # button logout
+        authenticator.logout('Logout', 'main')
+        st.title('Welcome')
+        show_sidebar()
+
+    elif authentication_status == False:
+        st.error('GET OUT OF MY WEBSITE YOU FILTHY ANIMAL')
+
+
+    elif authentication_status == None:
+        st.success('Welcome enter your username/password')
+
+if __name__ == "__main__":
+    hide_sidebar()
+    st.image("img/logo.png")
+    main()
+  
