@@ -21,10 +21,16 @@ def main():
     name, authentication_status, username = authenticator.login('Login', 'main')
 
     if authentication_status:
+        c1,c2,c3,= st.columns(3)
         # button logout
-        authenticator.logout('Logout', 'main')
-        st.title('Welcome')
-        show_sidebar()
+        with c2: 
+            st.title(f'Welcome {username}')
+            url = 'https://robohash.org/' + username
+            st.image(url,use_column_width=True)
+            authenticator.logout('Logout', 'main')
+            show_sidebar()
+        
+        st.sidebar
 
     elif authentication_status == False:
         st.error('GET OUT OF MY WEBSITE YOU FILTHY ANIMAL')
@@ -37,4 +43,3 @@ if __name__ == "__main__":
     hide_sidebar()
     st.image("img/logo.png")
     main()
-  
