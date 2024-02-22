@@ -20,6 +20,8 @@ def auth_data():
 
     return authenticator
 
-
+def username_data():
+    with open('config.yaml') as file:
+        return yaml.load(file, Loader=SafeLoader)
 
     

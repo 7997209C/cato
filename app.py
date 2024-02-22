@@ -1,6 +1,6 @@
 import streamlit as st
 from streamlit_extras.buy_me_a_coffee import button
-from auth import auth_data
+from auth import auth_data,username_data
 from helpers.utils import set_png_as_page_bg , hide_sidebar,show_sidebar
 st.set_page_config(initial_sidebar_state="collapsed")
 #****************************background image###################
@@ -19,7 +19,6 @@ def main():
 
     # login button
     name, authentication_status, username = authenticator.login('Login', 'main')
-
     if authentication_status:
         c1,c2,c3,= st.columns(3)
         # button logout
@@ -27,10 +26,15 @@ def main():
             st.title(f'Welcome {username}')
             url = 'https://robohash.org/' + username
             st.image(url,use_column_width=True)
-            authenticator.logout('Logout', 'main')
+            
             show_sidebar()
-        
-        st.sidebar
+
+        with st.sidebar:
+            authenticator.logout('Logout', 'main')
+
+        # all_username = username_data()
+        # search= st.selectbox("invite your friends into your chat here!",)
+
 
     elif authentication_status == False:
         st.error('GET OUT OF MY WEBSITE YOU FILTHY ANIMAL')

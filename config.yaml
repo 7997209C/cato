@@ -8,10 +8,10 @@ credentials:
       email: rbriggs@gmail.com
       name: Rebecca Briggs
       password: $2b$12$uQOOZ4KsvlbvQbgDecvHWOdCr.xZUmnlgKYVB5uZvqZcuqraGqLXG
-    cato1234:
+    '7997209':
       email: catocarling@gmail.com
       name: cato carling
-      password: $2b$12$xnSUqpPGiyieMyECV8LKVuonzBldEM08zzQQIsQbG9bsRP5wtq0ya
+      password: $2b$12$BZ7qi.tj2iOJEuiHhkm4TejxfzLdmue0AC4dD6mCCYzhaK1Sca5Sy
 cookie:
   expiry_days: 30
   key: some_signature_key # Must be string
