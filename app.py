@@ -26,9 +26,12 @@ def main():
             st.title(f'Welcome {username}')
             url = 'https://robohash.org/' + username
             st.image(url,use_column_width=True)
+            # show_sidebar()
+            st.divider()
+            # url="http://ccmessage.streamlit.app/chat"
+            #st.link_button("click me" , url="http://localhost:8501/chat" , use_container_width=True)
+            st.page_link("pages/chat.py", label=" :red[Start Chatting ] ",icon="🗨️", use_container_width=True)
             
-            show_sidebar()
-
         with st.sidebar:
             authenticator.logout('Logout', 'main')
 

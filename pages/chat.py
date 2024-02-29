@@ -1,6 +1,7 @@
 import streamlit as st
 import json
 import os
+from helpers.utils import hide_sidebar
 # st.text_input ("input email or phone number")
 
 # with st.sidebar:
@@ -30,6 +31,7 @@ def save_chat_message(filename, message_data):
         json.dump(messages, file)
 
 def main():
+    hide_sidebar()
     st.title("Chat")
 
     # Input for username
