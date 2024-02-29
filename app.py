@@ -1,6 +1,6 @@
 import streamlit as st
 from streamlit_extras.buy_me_a_coffee import button
-from auth import auth_data,username_data
+from auth import auth_data
 from helpers.utils import set_png_as_page_bg , hide_sidebar,show_sidebar
 st.set_page_config(initial_sidebar_state="collapsed")
 #****************************background image###################
