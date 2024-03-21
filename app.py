@@ -33,8 +33,8 @@ def main():
             authenticator.logout('Logout', 'main')
            
             
-        with st.form ("new chat form"):
-            st.write ("what color is the sky?")
+        # with st.form ("new chat form"):
+        #     st.write ("what color is the sky?")
         #     x = st.checkbox("pink")
         #     y = st.checkbox("blue")
         #     clicked = st.form_submit_button ("New Chat")
