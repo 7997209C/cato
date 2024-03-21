@@ -21,7 +21,6 @@ def main():
     name, authentication_status, username = authenticator.login('Login', 'main')
     if authentication_status:
         c1,c2,c3,= st.columns(3)
-        # button logout
         with c2: 
             st.title(f'Welcome {username}')
             url = 'https://robohash.org/' + username
@@ -31,10 +30,25 @@ def main():
             # url="http://ccmessage.streamlit.app/chat"
             #st.link_button("click me" , url="http://localhost:8501/chat" , use_container_width=True)
             st.page_link("pages/chat.py", label=" :red[Start Chatting ] ",icon="🗨️", use_container_width=True)
-            
-        with st.sidebar:
             authenticator.logout('Logout', 'main')
+           
+            
+        with st.form ("new chat form"):
+            st.write ("what color is the sky?")
+        #     x = st.checkbox("pink")
+        #     y = st.checkbox("blue")
+        #     clicked = st.form_submit_button ("New Chat")
 
+        #     if clicked:
+        #         if y:
+        #             st.write ("you got it")
+        #         else:
+        #             st.write("loser")
+        
+        # st.checkbox("testing")
+        
+
+            
         # all_username = username_data()
         # search= st.selectbox("invite your friends into your chat here!",)
 

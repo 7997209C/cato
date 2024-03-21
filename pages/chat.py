@@ -51,6 +51,8 @@ def main():
     # Chat input for new message
     new_message = st.chat_input("Send a message")
 
+    
+
     # Handle new message
     if new_message and username:
         save_chat_message(filename, {"username": username, "message": new_message})
