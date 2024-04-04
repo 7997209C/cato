@@ -1,21 +1,21 @@
 import streamlit as st
-import openai
+from openai import OpenAI
 
-openai.api_key = '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'
+
+client = OpenAI(api_key='')
 
 def get_joke(prompt):
     try:
-        response = openai.chat.completions.create(
-            model = "gpt-3.5-turbo",
-            prompt = prompt,
-            temperture = 0.5,
-            max_tokens = 60,
-            n = 1,
-            stop = None,
-            echo = False
+        completion = client.chat.completions.create(
+            model="gpt-3.5-turbo",
+            messages=[
+                {"role": "system", "content": "you are a drunk pirate"},
+                {"role": "user", "content": prompt}
+            ]
         )
-        joke = response.choices[0].text.strip()
-        return joke 
+
+        return completion.choices[0].message.content
+    
     except Exception as e:
         return f"an error occured: {str(e)}"
     

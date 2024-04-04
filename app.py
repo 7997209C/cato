@@ -23,8 +23,8 @@ def main():
         c1,c2,c3,= st.columns(3)
         with c2: 
             st.title(f'Welcome {username}')
-            url = 'https://robohash.org/' + username
-            st.image(url,use_column_width=True)
+            img_user = 'https://robohash.org/' + username
+            st.image(img_user,use_column_width=False)
             # show_sidebar()
             st.divider()
             # url="http://ccmessage.streamlit.app/chat"
@@ -33,19 +33,19 @@ def main():
             authenticator.logout('Logout', 'main')
            
             
-        # with st.form ("new chat form"):
-        #     st.write ("what color is the sky?")
-        #     x = st.checkbox("pink")
-        #     y = st.checkbox("blue")
-        #     clicked = st.form_submit_button ("New Chat")
+    # with st.form ("new chat form"):
+    #          st.write ("what color is the sky?")
+    #          x = st.checkbox("pink")
+    #          y = st.checkbox("blue")
+    #          clicked = st.form_submit_button ("New Chat")
 
-        #     if clicked:
-        #         if y:
-        #             st.write ("you got it")
-        #         else:
-        #             st.write("loser")
+    #          if clicked:
+    #             if y:
+    #                 st.write ("you got it")
+    #             else:
+    #                 st.write("loser")
         
-        # st.checkbox("testing")
+    #             st.checkbox("testing")
         
 
             
@@ -61,6 +61,6 @@ def main():
         st.success('Welcome enter your username/password')
 
 if __name__ == "__main__":
-    hide_sidebar()
+    # hide_sidebar()
     st.image("img/logo.png")
     main()
