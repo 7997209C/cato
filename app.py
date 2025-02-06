@@ -18,7 +18,7 @@ def main():
     authenticator = auth_data()
 
     # login button
-    name, authentication_status, username = authenticator.login('Login', 'main')
+    name, authentication_status, username = authenticator.login('main')
     if authentication_status:
         c1,c2,c3,= st.columns(3)
         with c2: 

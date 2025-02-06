@@ -14,8 +14,6 @@ def auth_data():
         config['cookie']['name'],
         config['cookie']['key'],
         config['cookie']['expiry_days'],
-        config['preauthorized']
-        
     )
 
     return authenticator
