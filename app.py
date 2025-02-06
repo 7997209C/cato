@@ -11,7 +11,7 @@ set_png_as_page_bg("img/latestbg.jpeg")
 #sidebar app
 # with st.sidebar:
 #     button(username='catocarling',floating=False)
-
+username = ""
 
 def main():
 

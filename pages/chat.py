@@ -2,6 +2,7 @@ import streamlit as st
 import json
 import os
 from helpers.utils import hide_sidebar
+import app 
 # st.text_input ("input email or phone number")
 
 # with st.sidebar:
@@ -35,8 +36,10 @@ def main():
     st.title("Chat")
 
     # Input for username
-    username = st.text_input("Enter your username", "")
-
+    # username = st.text_input("Enter your username", "")
+    # st.header("your name is", {app.username})
+    # app.username
+    st.title(f'Welcome {app.username}')
     # File to store chat messages
     filename = "chat_messages.json"
 
@@ -56,7 +59,7 @@ def main():
     # Handle new message
     if new_message and username:
         save_chat_message(filename, {"username": username, "message": new_message})
-        st.experimental_rerun()  # Rerun the app to refresh the messages
+        st.rerun()  # Rerun the app to refresh the messages
 
 if __name__ == "__main__":
     main()
